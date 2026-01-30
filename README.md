@@ -1,3 +1,5 @@
+[Please see the report for a summary of the project's architecture and technical choices.](./Report_AT.md)
+
 # AndroidRecruitmentTestApp
 ## ÉNONCÉ
 
