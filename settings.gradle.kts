@@ -11,6 +11,11 @@ pluginManagement {
         gradlePluginPortal()
     }
 }
+
+plugins {
+    id("org.gradle.toolchains.foojay-resolver-convention") version "1.0.0"
+}
+
 dependencyResolutionManagement {
     repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
     repositories {
@@ -21,4 +26,9 @@ dependencyResolutionManagement {
 
 rootProject.name = "Android RecruitmentTest App"
 include(":app")
-include(":data")
+include(":feature:details")
+include(":feature:album")
+include(":core:database")
+include(":core:network")
+include(":core:data")
+include(":core:domain")

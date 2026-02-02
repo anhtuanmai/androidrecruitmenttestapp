@@ -1,10 +1,16 @@
 package fr.leboncoin.androidrecruitmenttestapp
 
 import android.app.Application
-import fr.leboncoin.androidrecruitmenttestapp.di.AppDependencies
-import fr.leboncoin.androidrecruitmenttestapp.di.AppDependenciesProvider
+import dagger.hilt.android.HiltAndroidApp
+import timber.log.Timber
 
-class PhotoApp : Application(), AppDependenciesProvider {
+@HiltAndroidApp
+class PhotoApp : Application() {
 
-    override val dependencies: AppDependencies by lazy { AppDependencies() }
+    override fun onCreate() {
+        super.onCreate()
+        if (BuildConfig.DEBUG) {
+            Timber.plant(Timber.DebugTree())
+        }
+    }
 }

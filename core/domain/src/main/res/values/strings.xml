@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="oops_an_error_has_occurred">Oops! An error has occurred.</string>
+    <string name="no_internet_connection">No internet connection</string>
+    <string name="no_songs_available">No songs available</string>
+    <string name="retry">Retry</string>
+    <string name="previous">Previous</string>
+    <string name="next">Next</string>
+    <string name="back">Back</string>
+
+</resources>
