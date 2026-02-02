@@ -59,6 +59,8 @@ This document explains the main decisions made for the app's architecture, tools
 
 -   **`DataModule` Logging Fix**: Logging was incorrectly enabled in `RELEASE` builds and disabled in `DEBUG` builds. This has been corrected.
 
+-   **`AlbumApiService`** : The function `getAlbums` is renamed to `getSongs` to better suit the data. Related code is renamed as well, except for `AlbumsScreen`. 
+
 -   **`AnalyticsHelper` Injection**: The `AnalyticsHelper` was updated to have its `Context` dependency injected directly, which improves testability.
 
 -   **`AlbumItem` UI Fix**: The `modifier` parameter in the `AlbumItem` composable was corrected to ensure proper layout behavior.
