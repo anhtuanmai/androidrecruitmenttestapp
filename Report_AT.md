@@ -39,6 +39,8 @@ This document explains the main decisions made for the app's architecture, tools
 
 -   **Album List Paging**: The server sends a list of almost 5,000 songs. To avoid performance issues and a poor user experience, the data is displayed in pages of 30 items. This is an area for future improvement.
 
+-   **Offline Notification**: A small white text on a red background appears/disappears based on internet connection status on the main screen. The details screen does not have this feature.
+
 -   **Saving Favorites**: Favorite songs are saved in a dedicated table using the Room database. This ensures favorites are kept even if a song is removed from the server and simplifies data management when the main song list changes. Users can toggle a song's favorite status on both the main list and the details screen.
 
 -   **Data Models**: The app uses distinct models for different layers to ensure good separation of concerns. For example, `SongDto` is used for network data, `SongEntity` for the database, and `Song` as the domain model for use within the app's UI and business logic.
