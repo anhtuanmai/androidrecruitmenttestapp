@@ -12,6 +12,16 @@ This document explains the main decisions made for the app's architecture, tools
 
 -   **Dependency Management**: The project uses Hilt for dependency injection. This makes the code more organized and easier to test, and it is an improvement over the previous setup, which resembled a Service Locator pattern.
 
+### Module Definitions
+
+-   `:app`: The main application.
+-   `:feature:album`: A feature module containing all the UI and logic for displaying the list of albums.
+-   `:feature:details`: A feature module containing all the UI and logic for displaying the details of a selected song.
+-   `:core:data`: A core library module that implements the data layer. It contains repository implementations.
+-   `:core:domain`: A pure Kotlin library module that defines the core business logic and models of the application, such as the `Song` model and the `AlbumRepository` interface.
+-   `:core:database`: A core library module responsible for the Room database implementation, including all DAOs (Data Access Objects) and entities.
+-   `:core:network`: A core library module responsible for network communication, including the Retrofit API service and DTOs (Data Transfer Objects).
+
 ## Libraries & Tools
 
 -   **Android Jetpack**: The project heavily utilizes Jetpack components, including Room for the database, ViewModel for state management, and Navigation for handling screen flows.
