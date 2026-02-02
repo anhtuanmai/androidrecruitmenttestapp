@@ -14,10 +14,10 @@ This document explains the main decisions made for the app's architecture, tools
 
 ### Module Definitions
 
--   `:app`: The main application module that assembles the final app. It handles the primary navigation graph between the different feature modules.
+-   `:app`: The main application.
 -   `:feature:album`: A feature module containing all the UI and logic for displaying the list of albums.
 -   `:feature:details`: A feature module containing all the UI and logic for displaying the details of a selected song.
--   `:core:data`: A core library module that implements the data layer. It contains repository implementations and abstracts the data sources (network and database).
+-   `:core:data`: A core library module that implements the data layer. It contains repository implementations.
 -   `:core:domain`: A pure Kotlin library module that defines the core business logic and models of the application, such as the `Song` model and the `AlbumRepository` interface.
 -   `:core:database`: A core library module responsible for the Room database implementation, including all DAOs (Data Access Objects) and entities.
 -   `:core:network`: A core library module responsible for network communication, including the Retrofit API service and DTOs (Data Transfer Objects).
