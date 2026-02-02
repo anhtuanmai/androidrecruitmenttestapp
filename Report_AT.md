@@ -4,7 +4,7 @@ This document explains the main decisions made for the app's architecture, tools
 
 ## Architecture
 
--   **Architectural Style**: The project is based on a style called "First Feature Clean Architecture" (FFCA). It's a variation of the standard Clean Architecture, modified to better fit the needs of Android apps. Some parts of the app are designed to be portable and could be reused in other projects, including Kotlin Multiplatform (KMP) apps.
+-   **Architectural Style**: The project is based on a style called "First Feature Clean Architecture" (FFCA). It's a variation of the standard Clean Architecture, modified to better fit the needs of Android apps. Some parts of the app are designed to be portable and could be reused in other projects.
     -   Each feature is organized into layers: Domain (for business rules), Data (for handling data), and Presentation/UI (for the user interface).
     -   The UI layer uses the MVVM (Model-View-ViewModel) pattern. It leverages modern Kotlin features like Coroutine Flows and UIState classes to handle data reactively. ViewModels are designed to survive configuration changes (like screen rotation), which significantly improves the user experience by maintaining a smooth and consistent UI.
 
@@ -55,7 +55,7 @@ This document explains the main decisions made for the app's architecture, tools
 
 -   **Data Models**: The app uses distinct models for different layers to ensure good separation of concerns. For example, `SongDto` is used for network data, `SongEntity` for the database, and `Song` as the domain model for use within the app's UI and business logic.
 
--   **Image Caching**: The app provides two image caching strategies to support offline mode: a large 100 MB cache for long-term storage and another for images that are updated more often.
+-   **Image Caching**: The app provides two image caching strategies to support offline mode: a large 100 MB cache for long-term storage and another for images that are updated more often, such as profile pictures.
 
 -   **`DataModule` Logging Fix**: Logging was incorrectly enabled in `RELEASE` builds and disabled in `DEBUG` builds. This has been corrected.
 
